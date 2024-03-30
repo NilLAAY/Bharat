@@ -1,0 +1,60 @@
+footer {
+    background-color: rgba(0, 0, 0, 0.9); /* Black with some transparency */
+    color: var(--text-color); /* Orange */
+    padding: 40px 20px; /* Adjusted padding */
+    text-align: center;
+    width: 100%; /* Make the footer cover the full width */
+    box-shadow: 0 -8px 11px rgba(255, 165, 0, 0.7); /* Orange shadow effect */
+    margin-top: 200px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--text-color); /* Orange */
+    font-size: 1.5rem;
+}
+
+.footer-social a:hover {
+    color: var(--light-blue-color); /* Sandy Beige */
+}
+.footer-sections {
+    display: flex; /* Use flexbox to arrange sections */
+    justify-content: space-between; /* Space evenly between sections */
+}
+
+.left-section {
+    flex: 1; /* Grow to fill available space */
+    text-align: left; /* Align content to the left in the left section */
+}
+
+.right-section {
+    flex: 1; /* Grow to fill available space */
+    text-align: right; /* Align content to the right in the right section */
+}

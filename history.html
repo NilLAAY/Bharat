@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+    <style>
+         header {
+            position: fixed;
+            width: calc(100% - 40px); /* Adjusted width */
+            top: 0;
+            left: 0; /* Changed from right: 0 to left: 0 */
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.9); /* Black with some transparency */
+            box-shadow: 0 8px 11px rgba(255, 165, 0, 0.7); /* Orange shadow effect */
+            color: orangered; /* Orange */
+            padding: 20px; /* Adjusted padding */
+            transition: 0.5s;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Spread items evenly */
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0; /* Remove default margin */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .website-name {
+            font-size: 1.5rem; /* Larger font size for website name */
+            font-weight: bold; /* Bold font weight */
+            color: orangered; /* Orange */
+        }
+
+        .navbar li {
+            flex: 1; /* Distribute space equally among list items */
+            text-align: center; /* Center-align list items */
+        }
+
+        .navbar a {
+            font-size: 1rem;
+            font-weight: bold;
+            color: orangered; /* Orange */
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 25px; /* Position dropdown content below the dropdown button */
+            left: 0; /* Align dropdown content with the left edge of the dropdown button */
+            background-color: black; /* Black */
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content-places {
+            top: 25px; /* Adjust position */
+            left: 130px; /* Align with the left edge of the dropdown button */
+        }
+
+        .dropdown-content-history {
+            top: 27px; /* Adjust position */
+            left: 150px; /* Align with the left edge of the dropdown button */
+        }
+
+        .dropdown-content-food {
+            top: 25px; /* Adjust position */
+            left: 150px; /* Align with the left edge of the dropdown button */
+        }
+
+        .dropdown-content a {
+            color: white; /* Orange */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropbtn {
+            font-size: 1rem;
+            font-weight: 500;
+            color: orangered; /* Orange */
+            padding: 0.5rem 1rem;
+        }
+
+       
+
+
+
+  
+   
+        p {
+            text-align: justify;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        .glassy-background {
+            background-color: #FFA500; /* Orange color */
+            border-radius: 20px; /* Rounded border */
+            padding: 20px; /* Padding inside the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+           
+        }
+
+        .glassy-background p {
+        margin: 0;
+        padding: 10px 0;
+        color: black; /* Text color */
+        font-size: 20px; /* Font size */
+        line-height: 1.6; /* Line height */
+        font-weight: bold; /* Make text bold */
+        }
+
+        
+        .black-shadow {
+          /* Semi-transparent black background */
+            border-radius: 20px; /* Rounded border */
+            padding: 20px; /* Padding inside the box */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Darker shadow */
+            margin-top: 20px; /* Margin to separate from the glassy background */
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-top: 2800px;
+        }
+        .red-background {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .content-background {
+            background-color: #f5d121; /* Orange color */
+            border-radius: 20px; /* Rounded border */
+            padding: 20px; /* Padding inside the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+            margin: 0;
+            padding: 10px 0;
+            color: black; /* Text color */
+            font-size: 20px; /* Font size */
+            line-height: 1.6; /* Line height */
+            font-weight: bold; /* Make text bold */
+        }
+        footer{
+           width:100%;
+         }
+         
+        
+
+
+    </style>
+</head> 
+<body>
+    <header>
+        <div class="logo">  
+            <span class="website-name">BHARAT</span>
+        </div>
+    
+        <ul class="navbar">
+            <li><a href="bharat.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">About Bharat</a>
+                <div class="dropdown-content dropdown-content-history">
+                    <a href="history.html">History</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Places to Visit</a>
+                <div class="dropdown-content dropdown-content-places">
+                    <a href="Himalayas.html" target="_blank">Under the Himalayan Range</a>
+                    <a href="HeartOfBharat.html" target="_blank">Heart of Bharat</a>
+                    <a href="West.html" target="_blank">West of Bharat</a>
+                    <a href="DownSouth.html" target="_blank">Down South</a>
+                    <a href="And.html" target="_blank">Islands</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">What Bharat is Famous For</a>
+                <div class="dropdown-content dropdown-content-food">
+                    <a href="Cuisines.html">Cuisine</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <div class="black-shadow">
+   
+        <h1>History</h1>
+        <hr>
+
+    <br>
+
+
+   
+
+    <div style="background-color: rgba(106, 41, 61, 0.9); color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);">
+
+        <h1>Indus Valley's Forgotten Metropolis</h1>
+        
+        <ul>
+          <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Early Human Presence:</strong> Humans have inhabited South Asia for at least two million years.</li>
+          <br>
+          <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Shifting Lifestyles:</strong> By 30,000 years ago, stone age hunter-gatherers were established in the region.</li>
+          <br>
+          <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Rise of Agriculture:</strong>  Between 8000 and 6500 BCE, people transitioned from relying on wild resources to domesticating plants and animals.</li>
+          <br>
+          <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Urbanization Emerges:</strong>Highly organized settlements flourished in the northern regions (present-day Pakistan and North India) between 5000 and 2000 BCE.</li>
+        </ul>
+        
+    </div>
+        
+
+
+    
+    
+    
+<br>
+
+<div style="background-color: rgba(106, 41, 61, 0.9); color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);">
+
+    <h1>Indus Valley Civilization and the Rise of Indo-Aryan Culture</h1>
+    
+    <ul>
+      <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Emergence of Indus Valley Civilization: </strong> Around 2600 B.C.E., regional cultures in the Indus Valley region were unified into a culturally integrated network, spanning a vast area of 650,000 square kilometers.</li>
+      <br>
+      <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Shared Cultural Characteristics:</strong> The people of the Indus Valley shared several cultural traits, such as planned urban developments.</li>
+      <br>
+      <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Decline of the Indus Valley Civilization: </strong> The Indus Valley cultural system began to decline in the early centuries of the second millennium B.C.E.</li>
+      <br>
+      <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Rise of Indo-Aryan Culture: </strong>Around 1500 B.C.E., Indo-Aryan culture started to dominate the region. This culture is associated with Sanskrit, a language related to Greek, Latin, and Avestan.</li>
+    </ul>
+    
+</div>
+
+<br>
+<div style="background-color: rgba(106, 41, 61, 0.9); color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);">
+
+    <h1>The Early and Classical Periods</h1>
+    
+    <ul>
+      <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Early Human Presence:</strong> Humans have inhabited South Asia for at least two million years.</li>
+      <br>
+      <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Shifting Lifestyles:</strong> By 30,000 years ago, stone age hunter-gatherers were established in the region.</li>
+      <br>
+      <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Rise of Agriculture:</strong>  Between 8000 and 6500 BCE, people transitioned from relying on wild resources to domesticating plants and animals.</li>
+      <br>
+      <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Urbanization Emerges:</strong>Highly organized settlements flourished in the northern regions (present-day Pakistan and North India) between 5000 and 2000 BCE.</li>
+    </ul>
+    
+</div>
+<br>
+<div style="background-color: rgba(106, 41, 61, 0.9); color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);">
+
+    <h1>The "Medieval" Period</h1>
+
+    <ul>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Regional Centers and Lack of Central Authority:</strong> Strong regional centers emerged, with no overarching political authority in the subcontinent.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Muslim Polity in Sind:</strong> Sind in present-day Pakistan became integrated into a Muslim polity, while Turkic and Central Asian invasions commenced.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Turkish Invasions and Regional Kingdoms:</strong> Turkish invasions established centralized powers based in Delhi, while independent regional kingdoms continued to flourish.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Rajput and Regional Kingdoms:</strong> Rajput rulers in Rajasthan and Punjab established powerful kingdoms alongside other regional powers.</li>
+        <br>
+        
+    </ul>
+
+</div>
+
+<br>
+<div style="background-color: rgba(106, 41, 61, 0.9); color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);">
+
+    <h1>The Mughals</h1>
+
+    <ul>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Foundation of the Mughal Empire:</strong> Babur, a Turkish/Central Asian chieftain, established the Mughal empire in 1526, with roots tracing back to Chingiz Khan and Timur.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Expansion under Akbar:</strong> Akbar expanded Mughal rule across the north, incorporating Rajput rulers through diplomatic means.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Influence in the Punjab Hills:</strong> Mughal influence extended to the Rajput hill-states of the Punjab hills (now Himachal Pradesh) during Jahangir's reign.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Consolidation of Mughal Power:</strong> Mughal rulers consolidated power through administrative reforms and diplomatic alliances.</li>
+        <br>
+       
+    </ul>
+
+</div>
+
+<br>
+
+<div style="background-color: rgba(106, 41, 61, 0.9); color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);">
+    <h1>British Rule</h1>
+    <ul>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Establishment of British Control:</strong> British rule in South Asia began in the 18th century, gradually expanding as Mughal control declined.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Battle of Plassey:</strong> After the Battle of Plassey in 1757, the British gained control of Bengal, marking a significant step in their colonial expansion.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>First War of Indian Independence:</strong> The First War of Indian Independence in 1857 marked a turning point as British control was solidified.</li>
+
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Quasi-Independent Rulers:</strong> Despite British dominance, some regions remained under quasi-independent rulers, albeit under British influence.</li>
+        <br>
+        
+    </ul>
+</div>
+<br>
+<div style="background-color: rgba(106, 41, 61, 0.9); color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);">
+    <h1>The Modern Nation-States</h1>
+    <ul>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Partition of India and Pakistan:</strong> In 1947, India and Pakistan (East and West) were formed out of the British empire in India, accompanied by violence and displacement.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Formation of Bangladesh:</strong> In 1971, East Pakistan became independent as Bangladesh following a liberation war.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Cultural and Historical Ties:</strong> Despite political divisions, the nations of South Asia share cultural and historical ties, contributing to a complex regional identity.</li>
+        <br>
+        <li style="background-color: red; color: white; padding: 10px; border-radius: 5px;"><strong>Diaspora Community:</strong> South Asians in various parts of the world form a dynamic Diaspora community, maintaining connections with their homeland.</li>
+        <br>
+       
+    </ul>
+</div>
+
+
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum congue elit a urna vestibulum.</p>
+        </div>
+        <div class="footer-section">
+            <h2>Explore</h2>
+            <p>Destinations</p>
+            <p>Activities</p>
+            <p>Travel Guides</p>
+        </div>
+        <div class="footer-section">
+            <h2>Contact Us</h2>
+            <p>Email: info@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+        <div class="footer-section">
+            <h2>Follow Us</h2>
+            <div class="social">
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-instagram"></i></a>
+              <a href="#"><i class="bx bxl-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

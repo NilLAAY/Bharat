@@ -1,0 +1,43 @@
+  .container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust margin between containers */
+  }
+
+  .circle-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -10px; /* Adjust margin between circle and description */
+  }
+
+
+  .circle {
+    width: 20px; /* Adjust size of the circles */
+    height: 20px; /* Adjust size of the circles */
+    border-radius: 50%; /* Make the circles round */
+    background-color: black; /* Adjust color of the circles */
+    margin-bottom: 10px; /* Adjust margin between circles */
+ 
+  }
+
+  .dark {
+    background-color: black; /* Darkened circle color */
+  }
+
+  .description {
+    color: black; /* Adjust color of description */
+  }
+
+  .vertical-line {
+    width: 2px; /* Adjust thickness of the line */
+    height: 200px; /* Adjust height of the line */
+    background-color: black; /* Adjust color of the line */
+    margin-right: 20px; /* Adjust margin between line and circle */
+  }
+
+  .description-container {
+    display: flex;
+    align-items: center;
+  }
